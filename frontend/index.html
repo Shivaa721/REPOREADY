@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RepoReady - AI-Powered README Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="us-container">
+      <div
+        data-us-project="FD2es28SUrKW9JChlbWj"
+        style="width: 100%; height: 100%"
+      ></div>
+    </div>
+    
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo">
+        <i class="ph-light ph-code"></i>
+        REPOREADY
+      </div>
+      <div class="nav-buttons">
+        <a href="about.html" class="nav-btn">About</a>
+        <a href="#get-started" class="nav-btn get-started-nav">Get Started</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-badge">AI-Powered Documentation</div>
+      <h1 class="hero-title">
+        The only tool you need to generate your
+        <span class="gradient-text">README</span>
+      </h1>
+      <p class="hero-subtitle">
+        Our AI instantly analyzes your code and writes a complete, professional
+        README so you can focus on building.
+      </p>
+      <div class="hero-buttons">
+        <a href="#get-started" class="btn-primary">
+          <i class="ph-light ph-rocket-launch"></i>
+          Get Started
+        </a>
+        <a href="#learn-more" class="btn-secondary">
+          <i class="ph-light ph-play-circle"></i>
+          Learn More
+        </a>
+      </div>
+    </section>
+
+    <!-- Code Input Section -->
+    <section class="code-section" id="get-started">
+      <div class="code-container">
+        <div class="code-header">
+          <h2 class="code-title">Upload Your Code</h2>
+          <p class="code-subtitle">
+            Drop your files or paste your code to generate documentation
+          </p>
+        </div>
+
+        <div id="readmeOutput" class="readme-output"></div>
+
+
+        <!-- Drag and Drop Area -->
+        <div class="drop-area" id="dropArea">
+          <input
+            type="file"
+            class="file-input"
+            id="fileInput"
+            multiple
+            accept=".js,.ts,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.swift,.kt,.scala,.cs"
+          />
+          <div class="drop-icon">
+            <i class="ph-light ph-upload-simple"></i>
+          </div>
+          <div class="drop-text">Drop your code files here</div>
+          <div class="drop-subtext">
+            or click to browse • Supports JS, Python, Java, C++, and more
+          </div>
+        </div>
+
+        <div class="divider">
+          <span>or paste your code</span>
+        </div>
+
+        <textarea
+          class="code-textarea"
+          placeholder="// Paste your code here...
+// Example:
+function calculateSum(a, b) {
+    return a + b;
+}
+
+const result = calculateSum(5, 10);
+console.log('Result:', result);
+
+// Our AI will analyze your code structure, functions, dependencies
+// and generate comprehensive documentation automatically."
+          id="codeInput"
+        ></textarea>
+
+        <button
+          class="generate-btn"
+          id="generateBtn"
+          onclick="generateReadme()"
+        >
+          <i class="ph-light ph-sparkle"></i>
+          Generate Documentation
+        </button>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+  
+</html>
